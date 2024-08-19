@@ -1,14 +1,14 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: 'YLGPT服务系统'
+  url: 'https://status.ylgpt.cc' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
+  allmonitorsOperational: '所有系统正常运行'
+  notAllmonitorsOperational: '部分系统异常'
+  monitorLabelOperational: '运行中'
+  monitorLabelNotOperational: '异常'
   monitorLabelNoData: 'No data'
   dayInHistogramNoData: 'No data'
   dayInHistogramOperational: 'All good'
@@ -24,16 +24,43 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: ylgpt-cc
+    name: YLGPT
+    description: 'YLGPT智能助理'
+    url: 'https://ylgpt.cc'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: mp-65jy-com
+    name: YLGPT后端
+    url: 'https://mp.65jy.com'
+    method: GET
+    expectStatus: 200
+
+  - id: api-ylgpt-cc
+    name: 算力API
+    url: 'https://api.ylgpt.cc/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: zqx-work-gd
+    name: 免费全网VIP影视站
+    url: 'https://zqx.work.gd/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: fk-ylgpt-cc
+    name: YLGPT数卡
+    url: 'https://fk.ylgpt.cc/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: upay-ylgpt-cc
+    name: UPAY
+    url: 'https://upay.ylgpt.cc/'
     method: GET
     expectStatus: 200
